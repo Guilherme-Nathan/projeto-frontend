@@ -1,7 +1,6 @@
 import React from "react";
 
 const Section = ({ title, titleAlign = "left", link, children }) => {
-  // Se não houver título nem link, renderiza apenas os filhos diretamente
   if (!title && !link) {
     return <section style={{ width: "100%", margin: "40px 0" }}>{children}</section>;
   }

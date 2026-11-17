@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import arrowLeftIcon from "../../assets/icons/arrow-left.svg";
-import arrowRightIcon from "../../assets/icons/arrow-right.svg";
+import arrowLeftIcon from "../assets/arrow-left.svg";
+import arrowRightIcon from "../assets/arrow-right.svg";
 
 const Gallery = ({ className, width, height, radius, showThumbs, images = [] }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -24,7 +24,6 @@ const Gallery = ({ className, width, height, radius, showThumbs, images = [] }) 
       className={className} 
       style={{ display: "flex", flexDirection: "column", gap: "20px", width: width ? `${width}px` : "100%" }}
     >
-      {/* Container Principal do Slide */}
       <div 
         style={{ 
           position: "relative", 
@@ -57,7 +56,6 @@ const Gallery = ({ className, width, height, radius, showThumbs, images = [] }) 
           </div>
         ))}
 
-        {/* Botão Seta Esquerda */}
         <button
           onClick={handlePrev}
           disabled={currentIndex === 0}
@@ -82,7 +80,6 @@ const Gallery = ({ className, width, height, radius, showThumbs, images = [] }) 
           <img src={arrowLeftIcon} alt="Anterior" style={{ width: "20px", height: "20px" }} />
         </button>
 
-        {/* Botão Seta Direita */}
         <button
           onClick={handleNext}
           disabled={currentIndex === images.length - 1}
@@ -108,7 +105,6 @@ const Gallery = ({ className, width, height, radius, showThumbs, images = [] }) 
         </button>
       </div>
 
-      {/* Renderização condicional das Miniaturas (Thumbnails) */}
       {showThumbs !== undefined && (
         <div style={{ display: "flex", gap: "15px", overflowX: "auto" }}>
           {images.map((img, index) => {

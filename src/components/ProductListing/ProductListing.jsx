@@ -6,7 +6,7 @@ const ProductListing = ({ products }) => {
     <div 
       style={{ 
         display: "grid", 
-        gridTemplateColumns: "repeat(4, 1fr)", // Cria 4 colunas como no modelo
+        gridTemplateColumns: "repeat(4, 1fr)", 
         gap: "24px", 
         width: "100%",
         flexWrap: "wrap"
